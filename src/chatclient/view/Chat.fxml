@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox>
+         <children>
+            <ToolBar HBox.hgrow="ALWAYS">
+              <items>
+                <Button fx:id="connectButton" mnemonicParsing="false" onAction="#connectButtonHandle" text="Connect" />
+                  <Button fx:id="disconnectButton" mnemonicParsing="false" onAction="#disconnectButtonHandle" text="Disconnect" />
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+      <SplitPane fx:id="splitPane" dividerPositions="0.2719298245614035" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <items>
+            <ListView fx:id="nickNamesList" />
+            <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0">
+              <tabs>
+                <Tab closable="false" text="Main Chat">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <TextArea fx:id="textArea" editable="false" VBox.vgrow="ALWAYS" />
+                              <HBox VBox.vgrow="NEVER">
+                                 <children>
+                                    <TextField fx:id="messageField" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>

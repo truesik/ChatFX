@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane hgap="10.0" vgap="10.0" StackPane.alignment="TOP_LEFT">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <TextField fx:id="serverAddressField" prefHeight="25.0" prefWidth="64.0" promptText="Address" text="127.0.0.1" GridPane.columnIndex="1" />
+            <TextField fx:id="serverPortField" prefHeight="25.0" prefWidth="42.0" promptText="Port" text="8082" GridPane.columnIndex="3" GridPane.hgrow="NEVER" />
+            <TextField fx:id="nicknameField" promptText="dfgd_666" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+            <Label text="Server address:" />
+            <Label text="Port:" GridPane.columnIndex="2" />
+            <HBox GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="connectButton" defaultButton="true" mnemonicParsing="false" onAction="#connectButtonHandle" text="CONNECT" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelButtonHandle" text="CANCEL" />
+               </children>
+            </HBox>
+            <Label text="User nickname:" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</StackPane>
